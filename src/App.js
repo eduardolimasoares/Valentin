@@ -27,9 +27,9 @@ export default class App extends Component {
     AsyncStorage.getItem('signedIn').then(value => {
       this.setState({ signedIn: true });
     });
-    //   AsyncStorage.getItem("user").then(result => {
-    //     this.setState({ signedIn: false });
-    //   });
+      AsyncStorage.getItem("user").then(result => {
+        this.setState({ signedIn: false });
+      });
   }
   render() {
     const Layout = SplashRouter(this.state.signedIn);
